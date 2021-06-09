@@ -34,7 +34,6 @@
 		A90A397C267170E5009C24C6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A395E267170E4009C24C6 /* Models.swift */; };
 		A90A397D267170E5009C24C6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A395F267170E4009C24C6 /* Configuration.swift */; };
 		A90A398126717195009C24C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A90A398026717195009C24C6 /* Alamofire */; };
-		A96517F92671607D00CA640A /* RocketsNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = A96517F72671607D00CA640A /* RocketsNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A96518012671621300CA640A /* RocketsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96518002671621300CA640A /* RocketsNetwork.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +65,6 @@
 		A90A395E267170E4009C24C6 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A90A395F267170E4009C24C6 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A96517F42671607D00CA640A /* RocketsNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RocketsNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A96517F72671607D00CA640A /* RocketsNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RocketsNetwork.h; sourceTree = "<group>"; };
 		A96517F82671607D00CA640A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A96518002671621300CA640A /* RocketsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,7 +167,6 @@
 			children = (
 				A90A393E267170D5009C24C6 /* Codegen */,
 				A96517FF2671608400CA640A /* Resources */,
-				A96517F72671607D00CA640A /* RocketsNetwork.h */,
 				A96518002671621300CA640A /* RocketsNetwork.swift */,
 			);
 			path = RocketsNetwork;
@@ -190,7 +187,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A96517F92671607D00CA640A /* RocketsNetwork.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

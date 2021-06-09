@@ -6,13 +6,8 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		A96518372671660B00CA640A /* RocketsCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = A96518352671660B00CA640A /* RocketsCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		A96518322671660B00CA640A /* RocketsCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RocketsCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A96518352671660B00CA640A /* RocketsCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RocketsCoreData.h; sourceTree = "<group>"; };
 		A96518362671660B00CA640A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				A965183D2671661500CA640A /* Resources */,
-				A96518352671660B00CA640A /* RocketsCoreData.h */,
 			);
 			path = RocketsCoreData;
 			sourceTree = "<group>";
@@ -67,7 +61,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A96518372671660B00CA640A /* RocketsCoreData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

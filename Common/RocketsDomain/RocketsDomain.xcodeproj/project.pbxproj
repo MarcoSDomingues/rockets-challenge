@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A9651816267163F400CA640A /* RocketsDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = A9651814267163F400CA640A /* RocketsDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A965181F2671640700CA640A /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965181E2671640700CA640A /* Rocket.swift */; };
 		A96518222671641F00CA640A /* RocketsUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96518212671641F00CA640A /* RocketsUseCaseInterface.swift */; };
 		A96518252671652200CA640A /* RocketsRemoteRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96518242671652200CA640A /* RocketsRemoteRepositoryInterface.swift */; };
@@ -16,7 +15,6 @@
 
 /* Begin PBXFileReference section */
 		A9651811267163F400CA640A /* RocketsDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RocketsDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9651814267163F400CA640A /* RocketsDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RocketsDomain.h; sourceTree = "<group>"; };
 		A9651815267163F400CA640A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A965181E2671640700CA640A /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		A96518212671641F00CA640A /* RocketsUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsUseCaseInterface.swift; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 				A96518202671641600CA640A /* Use Cases */,
 				A965181D2671640100CA640A /* Entities */,
 				A965181C267163F900CA640A /* Resources */,
-				A9651814267163F400CA640A /* RocketsDomain.h */,
 			);
 			path = RocketsDomain;
 			sourceTree = "<group>";
@@ -103,7 +100,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9651816267163F400CA640A /* RocketsDomain.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
