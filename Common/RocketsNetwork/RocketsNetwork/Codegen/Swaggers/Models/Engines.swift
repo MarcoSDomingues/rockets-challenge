@@ -12,19 +12,19 @@ import Foundation
 
 internal struct Engines: Codable {
 
-    internal var engineLossMax: Int
+    internal var engineLossMax: Int?
     internal var isp: Isp?
     internal var layout: String?
     internal var number: Int?
     internal var propellant1: String?
     internal var propellant2: String?
     internal var thrustSeaLevel: ThrustSeaLevel?
-    internal var thrustToWeight: Int?
+    internal var thrustToWeight: Float?
     internal var thrustVacuum: ThrustVacuum?
     internal var type: String?
     internal var version: String?
 
-    internal init(engineLossMax: Int, isp: Isp?, layout: String?, number: Int?, propellant1: String?, propellant2: String?, thrustSeaLevel: ThrustSeaLevel?, thrustToWeight: Int?, thrustVacuum: ThrustVacuum?, type: String?, version: String?) {
+    internal init(engineLossMax: Int?, isp: Isp?, layout: String?, number: Int?, propellant1: String?, propellant2: String?, thrustSeaLevel: ThrustSeaLevel?, thrustToWeight: Float?, thrustVacuum: ThrustVacuum?, type: String?, version: String?) {
         self.engineLossMax = engineLossMax
         self.isp = isp
         self.layout = layout

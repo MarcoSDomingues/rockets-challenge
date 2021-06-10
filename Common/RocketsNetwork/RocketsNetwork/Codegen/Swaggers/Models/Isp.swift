@@ -12,10 +12,10 @@ import Foundation
 
 internal struct Isp: Codable {
 
-    internal var seaLevel: Int
+    internal var seaLevel: Int?
     internal var vacuum: Int?
 
-    internal init(seaLevel: Int, vacuum: Int?) {
+    internal init(seaLevel: Int?, vacuum: Int?) {
         self.seaLevel = seaLevel
         self.vacuum = vacuum
     }

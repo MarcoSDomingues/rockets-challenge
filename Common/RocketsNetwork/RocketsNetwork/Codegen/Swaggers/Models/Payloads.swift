@@ -12,10 +12,10 @@ import Foundation
 
 internal struct Payloads: Codable {
 
-    internal var compositeFairing: CompositeFairing
+    internal var compositeFairing: CompositeFairing?
     internal var option1: String?
 
-    internal init(compositeFairing: CompositeFairing, option1: String?) {
+    internal init(compositeFairing: CompositeFairing?, option1: String?) {
         self.compositeFairing = compositeFairing
         self.option1 = option1
     }

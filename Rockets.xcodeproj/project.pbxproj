@@ -20,6 +20,10 @@
 		A96517D326715EDA00CA640A /* RocketListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96517D226715EDA00CA640A /* RocketListViewModel.swift */; };
 		A96518042671632800CA640A /* RocketsNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96518032671632800CA640A /* RocketsNetwork.framework */; };
 		A96518052671632800CA640A /* RocketsNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A96518032671632800CA640A /* RocketsNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9EF2757267229690016EA80 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF2756267229690016EA80 /* UICollectionViewCell+ReuseIdentifier.swift */; };
+		A9EF2759267229910016EA80 /* RocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF2758267229910016EA80 /* RocketCollectionViewCell.swift */; };
+		A9EF275B26723BC90016EA80 /* RocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF275A26723BC90016EA80 /* RocketViewModel.swift */; };
+		A9EF275E2672427B0016EA80 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9EF275D2672427B0016EA80 /* Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +55,10 @@
 		A96517D026715EB900CA640A /* RocketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListViewController.swift; sourceTree = "<group>"; };
 		A96517D226715EDA00CA640A /* RocketListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListViewModel.swift; sourceTree = "<group>"; };
 		A96518032671632800CA640A /* RocketsNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RocketsNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9EF2756267229690016EA80 /* UICollectionViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		A9EF2758267229910016EA80 /* RocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCollectionViewCell.swift; sourceTree = "<group>"; };
+		A9EF275A26723BC90016EA80 /* RocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewModel.swift; sourceTree = "<group>"; };
+		A9EF275D2672427B0016EA80 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 			children = (
 				A96517CA26715E6800CA640A /* Application */,
 				A90A399726718A76009C24C6 /* Use Cases */,
+				A9EF2755267229340016EA80 /* Extensions */,
 				A96517CC26715E9D00CA640A /* Scenes */,
 				A96517CB26715E7800CA640A /* Resources */,
 			);
@@ -115,6 +124,7 @@
 		A96517CB26715E7800CA640A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A9EF275C2672426D0016EA80 /* Configs */,
 				A96517BF26715CE200CA640A /* Assets.xcassets */,
 				A96517C126715CE200CA640A /* LaunchScreen.storyboard */,
 				A96517C426715CE200CA640A /* Info.plist */,
@@ -151,6 +161,7 @@
 		A96517CF26715EAD00CA640A /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				A9EF275A26723BC90016EA80 /* RocketViewModel.swift */,
 				A96517D226715EDA00CA640A /* RocketListViewModel.swift */,
 			);
 			path = "View Models";
@@ -159,6 +170,7 @@
 		A96517D426715EF800CA640A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A9EF2758267229910016EA80 /* RocketCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +183,22 @@
 				A96518032671632800CA640A /* RocketsNetwork.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9EF2755267229340016EA80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF2756267229690016EA80 /* UICollectionViewCell+ReuseIdentifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A9EF275C2672426D0016EA80 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF275D2672427B0016EA80 /* Config.plist */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96517C326715CE200CA640A /* LaunchScreen.storyboard in Resources */,
+				A9EF275E2672427B0016EA80 /* Config.plist in Resources */,
 				A96517C026715CE200CA640A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +274,9 @@
 			files = (
 				A96517D126715EB900CA640A /* RocketListViewController.swift in Sources */,
 				A90A399C26718B5F009C24C6 /* UseCaseProvider.swift in Sources */,
+				A9EF2757267229690016EA80 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */,
+				A9EF2759267229910016EA80 /* RocketCollectionViewCell.swift in Sources */,
+				A9EF275B26723BC90016EA80 /* RocketViewModel.swift in Sources */,
 				A96517D326715EDA00CA640A /* RocketListViewModel.swift in Sources */,
 				A96517B726715CE100CA640A /* AppDelegate.swift in Sources */,
 				A90A399926718AB0009C24C6 /* RocketsUseCase.swift in Sources */,

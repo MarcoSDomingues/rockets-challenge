@@ -12,12 +12,12 @@ import Foundation
 
 internal struct PayloadWeights: Codable {
 
-    internal var _id: String
+    internal var _id: String?
     internal var kg: Int?
     internal var lb: Int?
     internal var name: String?
 
-    internal init(_id: String, kg: Int?, lb: Int?, name: String?) {
+    internal init(_id: String?, kg: Int?, lb: Int?, name: String?) {
         self._id = _id
         self.kg = kg
         self.lb = lb

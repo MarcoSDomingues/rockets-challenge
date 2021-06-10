@@ -12,7 +12,7 @@ import Foundation
 
 internal struct RocketResponse: Codable {
 
-    internal var active: Bool
+    internal var active: Bool?
     internal var boosters: Int?
     internal var company: String?
     internal var costPerLaunch: Int?
@@ -25,7 +25,6 @@ internal struct RocketResponse: Codable {
     internal var flickrImages: [String]?
     internal var height: Height?
     internal var _id: String?
-    internal var landingLegs: LandingLegs?
     internal var mass: Mass?
     internal var name: String?
     internal var payloadWeights: [PayloadWeights]?
@@ -35,7 +34,7 @@ internal struct RocketResponse: Codable {
     internal var type: String?
     internal var wikipedia: String?
 
-    internal init(active: Bool, boosters: Int?, company: String?, costPerLaunch: Int?, country: String?, _description: String?, diameter: Diameter?, engines: Engines?, firstFlight: Date?, firstStage: FirstStage?, flickrImages: [String]?, height: Height?, _id: String?, landingLegs: LandingLegs?, mass: Mass?, name: String?, payloadWeights: [PayloadWeights]?, secondStage: SecondStage?, stages: Int?, successRatePct: Int?, type: String?, wikipedia: String?) {
+    internal init(active: Bool?, boosters: Int?, company: String?, costPerLaunch: Int?, country: String?, _description: String?, diameter: Diameter?, engines: Engines?, firstFlight: Date?, firstStage: FirstStage?, flickrImages: [String]?, height: Height?, _id: String?, mass: Mass?, name: String?, payloadWeights: [PayloadWeights]?, secondStage: SecondStage?, stages: Int?, successRatePct: Int?, type: String?, wikipedia: String?) {
         self.active = active
         self.boosters = boosters
         self.company = company
@@ -49,7 +48,6 @@ internal struct RocketResponse: Codable {
         self.flickrImages = flickrImages
         self.height = height
         self._id = _id
-        self.landingLegs = landingLegs
         self.mass = mass
         self.name = name
         self.payloadWeights = payloadWeights
@@ -74,7 +72,6 @@ internal struct RocketResponse: Codable {
         case flickrImages = "flickr_images"
         case height
         case _id = "id"
-        case landingLegs = "landing_legs"
         case mass
         case name
         case payloadWeights = "payload_weights"

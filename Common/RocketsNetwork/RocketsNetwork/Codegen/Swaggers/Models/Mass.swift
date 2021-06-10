@@ -12,10 +12,10 @@ import Foundation
 
 internal struct Mass: Codable {
 
-    internal var kg: Int
+    internal var kg: Int?
     internal var lb: Int?
 
-    internal init(kg: Int, lb: Int?) {
+    internal init(kg: Int?, lb: Int?) {
         self.kg = kg
         self.lb = lb
     }

@@ -12,10 +12,10 @@ import Foundation
 
 internal struct ThrustVacuum: Codable {
 
-    internal var kN: Int
+    internal var kN: Int?
     internal var lbf: Int?
 
-    internal init(kN: Int, lbf: Int?) {
+    internal init(kN: Int?, lbf: Int?) {
         self.kN = kN
         self.lbf = lbf
     }

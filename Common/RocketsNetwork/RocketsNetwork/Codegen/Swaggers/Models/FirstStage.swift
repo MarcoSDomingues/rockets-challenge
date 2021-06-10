@@ -12,14 +12,14 @@ import Foundation
 
 internal struct FirstStage: Codable {
 
-    internal var burnTimeSec: Int
+    internal var burnTimeSec: Int?
     internal var engines: Int?
     internal var fuelAmountTons: Float?
     internal var reusable: Bool?
     internal var thrustSeaLevel: ThrustSeaLevel?
     internal var thrustVacuum: ThrustVacuum?
 
-    internal init(burnTimeSec: Int, engines: Int?, fuelAmountTons: Float?, reusable: Bool?, thrustSeaLevel: ThrustSeaLevel?, thrustVacuum: ThrustVacuum?) {
+    internal init(burnTimeSec: Int?, engines: Int?, fuelAmountTons: Float?, reusable: Bool?, thrustSeaLevel: ThrustSeaLevel?, thrustVacuum: ThrustVacuum?) {
         self.burnTimeSec = burnTimeSec
         self.engines = engines
         self.fuelAmountTons = fuelAmountTons

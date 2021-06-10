@@ -12,10 +12,10 @@ import Foundation
 
 internal struct Height: Codable {
 
-    internal var feet: Int
+    internal var feet: Float?
     internal var meters: Float?
 
-    internal init(feet: Int, meters: Float?) {
+    internal init(feet: Float?, meters: Float?) {
         self.feet = feet
         self.meters = meters
     }

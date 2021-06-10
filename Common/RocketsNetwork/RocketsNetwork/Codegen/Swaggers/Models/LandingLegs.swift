@@ -5,21 +5,21 @@
 // https://github.com/swagger-api/swagger-codegen
 //
 
-import Foundation
-
-
-/** Model for LandingLegs */
-
-internal struct LandingLegs: Codable {
-
-    internal var material: String
-    internal var number: Int?
-
-    internal init(material: String, number: Int?) {
-        self.material = material
-        self.number = number
-    }
-
-
-}
+//import Foundation
+//
+//
+///** Model for LandingLegs */
+//
+//internal struct LandingLegs: Codable {
+//
+//    internal var material: String?
+//    internal var number: Int?
+//
+//    internal init(material: String?, number: Int?) {
+//        self.material = material
+//        self.number = number
+//    }
+//
+//
+//}
 

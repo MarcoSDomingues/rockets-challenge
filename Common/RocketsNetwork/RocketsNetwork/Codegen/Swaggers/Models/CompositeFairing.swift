@@ -12,10 +12,10 @@ import Foundation
 
 internal struct CompositeFairing: Codable {
 
-    internal var diameter: Diameter
+    internal var diameter: Diameter?
     internal var height: Height?
 
-    internal init(diameter: Diameter, height: Height?) {
+    internal init(diameter: Diameter?, height: Height?) {
         self.diameter = diameter
         self.height = height
     }

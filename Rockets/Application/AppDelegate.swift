@@ -35,6 +35,7 @@ extension AppDelegate {
     
     private func setupRocketsNetwork() {
         guard let plistPath = Bundle.main.path(forResource: "Config", ofType: "plist") else {
+            assert(false, "Missing configuration file.")
             return
         }
         
