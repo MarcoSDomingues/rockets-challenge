@@ -11,7 +11,15 @@ import RocketsDomain
 internal extension RocketResponse {
     
     func asRocket() -> Rocket {
-        return Rocket(name: self.name)
+        var imageURL: URL?
+        if let urlString = self.flickrImages?.first {
+            imageURL = URL(string: urlString)
+        }
+        
+        return Rocket(name: self.name,
+                      firstFlightDate: self.firstFlight,
+                      successRatePercentage: self.successRatePct,
+                      rocketImageURL: imageURL)
     }
     
 }

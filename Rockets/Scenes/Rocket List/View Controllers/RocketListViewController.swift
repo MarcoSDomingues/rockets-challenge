@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class RocketListViewController: UIViewController {
     
@@ -156,6 +157,10 @@ extension RocketListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return rockets.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
 }

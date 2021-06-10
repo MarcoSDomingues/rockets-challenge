@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,11 @@
 		A9EF2759267229910016EA80 /* RocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF2758267229910016EA80 /* RocketCollectionViewCell.swift */; };
 		A9EF275B26723BC90016EA80 /* RocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF275A26723BC90016EA80 /* RocketViewModel.swift */; };
 		A9EF275E2672427B0016EA80 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9EF275D2672427B0016EA80 /* Config.plist */; };
+		A9EF276026728BBE0016EA80 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF275F26728BBE0016EA80 /* UIView+Shadow.swift */; };
+		A9EF276226728FD70016EA80 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF276126728FD70016EA80 /* Date+Format.swift */; };
+		A9EF27642672A3AC0016EA80 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF27632672A3AB0016EA80 /* PaddedLabel.swift */; };
+		A9EF27672672AFA50016EA80 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = A9EF27662672AFA50016EA80 /* Nuke */; };
+		A9EF27692672B0050016EA80 /* UIImageView+Nuke.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF27682672B0050016EA80 /* UIImageView+Nuke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +64,10 @@
 		A9EF2758267229910016EA80 /* RocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9EF275A26723BC90016EA80 /* RocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewModel.swift; sourceTree = "<group>"; };
 		A9EF275D2672427B0016EA80 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		A9EF275F26728BBE0016EA80 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		A9EF276126728FD70016EA80 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		A9EF27632672A3AB0016EA80 /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		A9EF27682672B0050016EA80 /* UIImageView+Nuke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Nuke.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +78,7 @@
 				A96518042671632800CA640A /* RocketsNetwork.framework in Frameworks */,
 				A90A3984267177EB009C24C6 /* RocketsCoreData.framework in Frameworks */,
 				A90A3986267177EB009C24C6 /* RocketsDomain.framework in Frameworks */,
+				A9EF27672672AFA50016EA80 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				A9EF2758267229910016EA80 /* RocketCollectionViewCell.swift */,
+				A9EF27632672A3AB0016EA80 /* PaddedLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,7 +199,10 @@
 		A9EF2755267229340016EA80 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A9EF276126728FD70016EA80 /* Date+Format.swift */,
+				A9EF275F26728BBE0016EA80 /* UIView+Shadow.swift */,
 				A9EF2756267229690016EA80 /* UICollectionViewCell+ReuseIdentifier.swift */,
+				A9EF27682672B0050016EA80 /* UIImageView+Nuke.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,6 +232,9 @@
 			dependencies = (
 			);
 			name = Rockets;
+			packageProductDependencies = (
+				A9EF27662672AFA50016EA80 /* Nuke */,
+			);
 			productName = Rockets;
 			productReference = A96517B326715CE100CA640A /* Rockets.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +262,9 @@
 				Base,
 			);
 			mainGroup = A96517AA26715CE100CA640A;
+			packageReferences = (
+				A9EF27652672AFA50016EA80 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = A96517B426715CE100CA640A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -278,8 +298,12 @@
 				A9EF2759267229910016EA80 /* RocketCollectionViewCell.swift in Sources */,
 				A9EF275B26723BC90016EA80 /* RocketViewModel.swift in Sources */,
 				A96517D326715EDA00CA640A /* RocketListViewModel.swift in Sources */,
+				A9EF276226728FD70016EA80 /* Date+Format.swift in Sources */,
 				A96517B726715CE100CA640A /* AppDelegate.swift in Sources */,
+				A9EF276026728BBE0016EA80 /* UIView+Shadow.swift in Sources */,
+				A9EF27642672A3AC0016EA80 /* PaddedLabel.swift in Sources */,
 				A90A399926718AB0009C24C6 /* RocketsUseCase.swift in Sources */,
+				A9EF27692672B0050016EA80 /* UIImageView+Nuke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +499,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9EF27652672AFA50016EA80 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9EF27662672AFA50016EA80 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9EF27652672AFA50016EA80 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A96517AB26715CE100CA640A /* Project object */;
 }
