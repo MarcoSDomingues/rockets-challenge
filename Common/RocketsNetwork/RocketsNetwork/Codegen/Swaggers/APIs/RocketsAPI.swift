@@ -15,7 +15,7 @@ internal class RocketsAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    internal class func callRockets(completion: @escaping ((_ data: [Rocket]?,_ error: Error?) -> Void)) {
+    internal class func callRockets(completion: @escaping ((_ data: [RocketResponse]?,_ error: Error?) -> Void)) {
         callRocketsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -24,7 +24,7 @@ internal class RocketsAPI {
 
     /**
      - GET /rockets
-     - Rocket
+     - RocketResponse
      - examples: [{contentType=application/json, example=[ {
   "height" : {
     "meters" : 22.25,
@@ -435,16 +435,16 @@ internal class RocketsAPI {
   "id" : "5e9d0d96eda699382d09d1ee"
 } ]}]
 
-     - returns: RequestBuilder<[Rocket]> 
+     - returns: RequestBuilder<[RocketResponse]> 
      */
-    internal class func callRocketsWithRequestBuilder() -> RequestBuilder<[Rocket]> {
+    internal class func callRocketsWithRequestBuilder() -> RequestBuilder<[RocketResponse]> {
         let path = "/rockets"
         let URLString = SwaggerClientAPI.basePath + path
         let parameters: [String:Any]? = nil
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<[Rocket]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[RocketResponse]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

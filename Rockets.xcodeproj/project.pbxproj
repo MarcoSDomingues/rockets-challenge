@@ -11,6 +11,8 @@
 		A90A3985267177EB009C24C6 /* RocketsCoreData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A90A3982267177EB009C24C6 /* RocketsCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A90A3986267177EB009C24C6 /* RocketsDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90A3983267177EB009C24C6 /* RocketsDomain.framework */; };
 		A90A3987267177EB009C24C6 /* RocketsDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A90A3983267177EB009C24C6 /* RocketsDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A90A399926718AB0009C24C6 /* RocketsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A399826718AB0009C24C6 /* RocketsUseCase.swift */; };
+		A90A399C26718B5F009C24C6 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A399B26718B5F009C24C6 /* UseCaseProvider.swift */; };
 		A96517B726715CE100CA640A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96517B626715CE100CA640A /* AppDelegate.swift */; };
 		A96517C026715CE200CA640A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A96517BF26715CE200CA640A /* Assets.xcassets */; };
 		A96517C326715CE200CA640A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96517C126715CE200CA640A /* LaunchScreen.storyboard */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		A90A3982267177EB009C24C6 /* RocketsCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RocketsCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90A3983267177EB009C24C6 /* RocketsDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RocketsDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90A399826718AB0009C24C6 /* RocketsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsUseCase.swift; sourceTree = "<group>"; };
+		A90A399B26718B5F009C24C6 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		A96517B326715CE100CA640A /* Rockets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rockets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96517B626715CE100CA640A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96517BF26715CE200CA640A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A90A399726718A76009C24C6 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				A90A399826718AB0009C24C6 /* RocketsUseCase.swift */,
+				A90A399B26718B5F009C24C6 /* UseCaseProvider.swift */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
 		A96517AA26715CE100CA640A = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				A96517CA26715E6800CA640A /* Application */,
+				A90A399726718A76009C24C6 /* Use Cases */,
 				A96517CC26715E9D00CA640A /* Scenes */,
 				A96517CB26715E7800CA640A /* Resources */,
 			);
@@ -230,8 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96517D126715EB900CA640A /* RocketListViewController.swift in Sources */,
+				A90A399C26718B5F009C24C6 /* UseCaseProvider.swift in Sources */,
 				A96517D326715EDA00CA640A /* RocketListViewModel.swift in Sources */,
 				A96517B726715CE100CA640A /* AppDelegate.swift in Sources */,
+				A90A399926718AB0009C24C6 /* RocketsUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

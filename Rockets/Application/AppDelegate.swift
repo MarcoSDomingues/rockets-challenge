@@ -17,8 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupRocketsNetwork()
         
+        let viewModel = RocketListViewModel()
+        let vc = RocketListViewController(viewModel: viewModel)
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: RocketListViewController())
+        window?.rootViewController = UINavigationController(rootViewController: vc)
         window?.makeKeyAndVisible()
         
         return true

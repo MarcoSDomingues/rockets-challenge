@@ -27,15 +27,34 @@
 		A90A3974267170E4009C24C6 /* Mass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A3956267170E4009C24C6 /* Mass.swift */; };
 		A90A3976267170E4009C24C6 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A3958267170E4009C24C6 /* FirstStage.swift */; };
 		A90A3977267170E4009C24C6 /* Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A3959267170E4009C24C6 /* Height.swift */; };
-		A90A3978267170E4009C24C6 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A395A267170E4009C24C6 /* Rocket.swift */; };
+		A90A3978267170E4009C24C6 /* RocketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A395A267170E4009C24C6 /* RocketResponse.swift */; };
 		A90A3979267170E4009C24C6 /* PayloadWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A395B267170E4009C24C6 /* PayloadWeights.swift */; };
 		A90A397A267170E5009C24C6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A395C267170E4009C24C6 /* Extensions.swift */; };
 		A90A397B267170E5009C24C6 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A395D267170E4009C24C6 /* JSONEncodingHelper.swift */; };
 		A90A397C267170E5009C24C6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A395E267170E4009C24C6 /* Models.swift */; };
 		A90A397D267170E5009C24C6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A395F267170E4009C24C6 /* Configuration.swift */; };
 		A90A398126717195009C24C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A90A398026717195009C24C6 /* Alamofire */; };
+		A90A398A26718272009C24C6 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A398926718272009C24C6 /* BaseRepository.swift */; };
+		A90A398C2671838D009C24C6 /* RocketsRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A398B2671838D009C24C6 /* RocketsRemoteRepository.swift */; };
+		A90A398F26718842009C24C6 /* Rocket+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90A398E26718842009C24C6 /* Rocket+Transform.swift */; };
+		A90A399426718A5F009C24C6 /* RocketsDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90A399326718A5F009C24C6 /* RocketsDomain.framework */; };
+		A90A399526718A5F009C24C6 /* RocketsDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A90A399326718A5F009C24C6 /* RocketsDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A96518012671621300CA640A /* RocketsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96518002671621300CA640A /* RocketsNetwork.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A90A399626718A5F009C24C6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A90A399526718A5F009C24C6 /* RocketsDomain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A90A3940267170E4009C24C6 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
@@ -58,12 +77,16 @@
 		A90A3956267170E4009C24C6 /* Mass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mass.swift; sourceTree = "<group>"; };
 		A90A3958267170E4009C24C6 /* FirstStage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
 		A90A3959267170E4009C24C6 /* Height.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Height.swift; sourceTree = "<group>"; };
-		A90A395A267170E4009C24C6 /* Rocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		A90A395A267170E4009C24C6 /* RocketResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketResponse.swift; sourceTree = "<group>"; };
 		A90A395B267170E4009C24C6 /* PayloadWeights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadWeights.swift; sourceTree = "<group>"; };
 		A90A395C267170E4009C24C6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A90A395D267170E4009C24C6 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
 		A90A395E267170E4009C24C6 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A90A395F267170E4009C24C6 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		A90A398926718272009C24C6 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		A90A398B2671838D009C24C6 /* RocketsRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsRemoteRepository.swift; sourceTree = "<group>"; };
+		A90A398E26718842009C24C6 /* Rocket+Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+Transform.swift"; sourceTree = "<group>"; };
+		A90A399326718A5F009C24C6 /* RocketsDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RocketsDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96517F42671607D00CA640A /* RocketsNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RocketsNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96517F82671607D00CA640A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A96518002671621300CA640A /* RocketsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsNetwork.swift; sourceTree = "<group>"; };
@@ -74,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90A399426718A5F009C24C6 /* RocketsDomain.framework in Frameworks */,
 				A90A398126717195009C24C6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,7 +147,7 @@
 				A90A3956267170E4009C24C6 /* Mass.swift */,
 				A90A3958267170E4009C24C6 /* FirstStage.swift */,
 				A90A3959267170E4009C24C6 /* Height.swift */,
-				A90A395A267170E4009C24C6 /* Rocket.swift */,
+				A90A395A267170E4009C24C6 /* RocketResponse.swift */,
 				A90A395B267170E4009C24C6 /* PayloadWeights.swift */,
 			);
 			path = Models;
@@ -146,11 +170,37 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		A90A398826718263009C24C6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A90A398926718272009C24C6 /* BaseRepository.swift */,
+				A90A398B2671838D009C24C6 /* RocketsRemoteRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A90A398D26718753009C24C6 /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				A90A398E26718842009C24C6 /* Rocket+Transform.swift */,
+			);
+			path = Transforms;
+			sourceTree = "<group>";
+		};
+		A90A399226718A5F009C24C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A90A399326718A5F009C24C6 /* RocketsDomain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A96517EA2671607D00CA640A = {
 			isa = PBXGroup;
 			children = (
 				A96517F62671607D00CA640A /* RocketsNetwork */,
 				A96517F52671607D00CA640A /* Products */,
+				A90A399226718A5F009C24C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +215,8 @@
 		A96517F62671607D00CA640A /* RocketsNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				A90A398D26718753009C24C6 /* Transforms */,
+				A90A398826718263009C24C6 /* Repositories */,
 				A90A393E267170D5009C24C6 /* Codegen */,
 				A96517FF2671608400CA640A /* Resources */,
 				A96518002671621300CA640A /* RocketsNetwork.swift */,
@@ -201,6 +253,7 @@
 				A96517F02671607D00CA640A /* Sources */,
 				A96517F12671607D00CA640A /* Frameworks */,
 				A96517F22671607D00CA640A /* Resources */,
+				A90A399626718A5F009C24C6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +321,7 @@
 				A90A396E267170E4009C24C6 /* Thrust.swift in Sources */,
 				A90A3961267170E4009C24C6 /* AlamofireImplementations.swift in Sources */,
 				A90A3979267170E4009C24C6 /* PayloadWeights.swift in Sources */,
+				A90A398F26718842009C24C6 /* Rocket+Transform.swift in Sources */,
 				A90A3962267170E4009C24C6 /* JSONValue.swift in Sources */,
 				A90A3966267170E4009C24C6 /* APIs.swift in Sources */,
 				A90A397D267170E5009C24C6 /* Configuration.swift in Sources */,
@@ -278,6 +332,7 @@
 				A90A3960267170E4009C24C6 /* APIHelper.swift in Sources */,
 				A90A3974267170E4009C24C6 /* Mass.swift in Sources */,
 				A90A396F267170E4009C24C6 /* CompositeFairing.swift in Sources */,
+				A90A398C2671838D009C24C6 /* RocketsRemoteRepository.swift in Sources */,
 				A90A3972267170E4009C24C6 /* ThrustSeaLevel.swift in Sources */,
 				A96518012671621300CA640A /* RocketsNetwork.swift in Sources */,
 				A90A3977267170E4009C24C6 /* Height.swift in Sources */,
@@ -286,7 +341,8 @@
 				A90A3964267170E4009C24C6 /* CodableHelper.swift in Sources */,
 				A90A3969267170E4009C24C6 /* SecondStage.swift in Sources */,
 				A90A3965267170E4009C24C6 /* JSONEncodableEncoding.swift in Sources */,
-				A90A3978267170E4009C24C6 /* Rocket.swift in Sources */,
+				A90A398A26718272009C24C6 /* BaseRepository.swift in Sources */,
+				A90A3978267170E4009C24C6 /* RocketResponse.swift in Sources */,
 				A90A397B267170E5009C24C6 /* JSONEncodingHelper.swift in Sources */,
 				A90A3971267170E4009C24C6 /* Payloads.swift in Sources */,
 				A90A3963267170E4009C24C6 /* RocketsAPI.swift in Sources */,

@@ -7,7 +7,14 @@
 
 import Combine
 import Foundation
+import RocketsDomain
 
 class RocketListViewModel {
+    
+    private var rocketsUseCase: RocketsUseCaseInterface
+    
+    init(rocketsUseCase: RocketsUseCaseInterface = UseCaseProvider.rocketsUseCase) {
+        self.rocketsUseCase = rocketsUseCase
+    }
     
 }

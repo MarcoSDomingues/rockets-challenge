@@ -25,13 +25,13 @@ public class RocketsNetwork {
             throw ConfigurationError.invalidFormat
         }
         
-        let host = try readHost(from: keyData)
-        self.configuration = Configuration(host: host)
+        let baseUrlString = try readBaseUrl(from: keyData)
+        self.configuration = Configuration(baseUrlString: baseUrlString)
     }
     
-    private func readHost(from dict: [String: String]) throws -> String {
-        guard let host = dict["host"] else {
-            throw ConfigurationError.missingHost
+    private func readBaseUrl(from dict: [String: String]) throws -> String {
+        guard let host = dict["baseUrl"] else {
+            throw ConfigurationError.missingBaseUrl
         }
         return host
     }
@@ -45,12 +45,12 @@ extension RocketsNetwork {
     public enum ConfigurationError: Error, LocalizedError {
         case unknownPath
         case invalidFormat
-        case missingHost
+        case missingBaseUrl
         
         public var errorDescription: String? {
             switch self {
-            case .missingHost:
-                return "Missing `host` key."
+            case .missingBaseUrl:
+                return "Missing `baseUrl` key."
             case .unknownPath:
                 return "Could not serialize plist data."
             case .invalidFormat:
@@ -61,16 +61,16 @@ extension RocketsNetwork {
     
     public struct Configuration {
         
-        public let host: String
+        public let baseUrlString: String
         
         internal static var `default` = Configuration()
 
         private init() {
-            self.host = ""
+            self.baseUrlString = ""
         }
         
-        public init(host: String) {
-            self.host = host
+        public init(baseUrlString: String) {
+            self.baseUrlString = baseUrlString
         }
         
     }
