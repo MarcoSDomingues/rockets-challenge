@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SwiftUI
 
 class RocketListViewController: UIViewController {
     
@@ -143,6 +144,12 @@ extension RocketListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewModel = RocketDetailViewModel(rocket: rockets[indexPath.item])
+        let detailVc = UIHostingController(rootView: RocketDetailView(viewModel: viewModel))
+        navigationController?.pushViewController(detailVc, animated: true)
     }
     
 }

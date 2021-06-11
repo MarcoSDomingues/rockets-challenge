@@ -15,7 +15,7 @@ internal struct RocketResponse: Codable {
     internal var active: Bool?
     internal var boosters: Int?
     internal var company: String?
-    internal var costPerLaunch: Int?
+    internal var costPerLaunch: Float?
     internal var country: String?
     internal var _description: String?
     internal var diameter: Diameter?
@@ -34,7 +34,7 @@ internal struct RocketResponse: Codable {
     internal var type: String?
     internal var wikipedia: String?
 
-    internal init(active: Bool?, boosters: Int?, company: String?, costPerLaunch: Int?, country: String?, _description: String?, diameter: Diameter?, engines: Engines?, firstFlight: Date?, firstStage: FirstStage?, flickrImages: [String]?, height: Height?, _id: String?, mass: Mass?, name: String?, payloadWeights: [PayloadWeights]?, secondStage: SecondStage?, stages: Int?, successRatePct: Int?, type: String?, wikipedia: String?) {
+    internal init(active: Bool?, boosters: Int?, company: String?, costPerLaunch: Float?, country: String?, _description: String?, diameter: Diameter?, engines: Engines?, firstFlight: Date?, firstStage: FirstStage?, flickrImages: [String]?, height: Height?, _id: String?, mass: Mass?, name: String?, payloadWeights: [PayloadWeights]?, secondStage: SecondStage?, stages: Int?, successRatePct: Int?, type: String?, wikipedia: String?) {
         self.active = active
         self.boosters = boosters
         self.company = company

@@ -12,14 +12,24 @@ import RocketsDomain
 struct RocketViewModel {
     
     private(set) var name: String?
+    private(set) var country: String?
+    private(set) var cost: String?
+    private(set) var isActive: Bool
+    private(set) var description: String?
     private(set) var firstFlightDateString: String?
     private(set) var successRateString: String?
     private(set) var badgeColor: UIColor?
     private(set) var rocketImageURL: URL?
+    private(set) var wikipediaURL: URL?
     
     init(rocket: Rocket) {
         self.name = rocket.name
+        self.country = rocket.country
+        self.cost = "$3000,12"
+        self.isActive = rocket.isActive
+        self.description = rocket.description
         self.rocketImageURL = rocket.rocketImageURL
+        self.wikipediaURL = rocket.wikipediaURL
         
         if let firstFlightDate = rocket.firstFlightDate {
             self.firstFlightDateString = String(format: "Flying since: %@", firstFlightDate.short)

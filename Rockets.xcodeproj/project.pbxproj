@@ -29,6 +29,11 @@
 		A9EF27642672A3AC0016EA80 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF27632672A3AB0016EA80 /* PaddedLabel.swift */; };
 		A9EF27672672AFA50016EA80 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = A9EF27662672AFA50016EA80 /* Nuke */; };
 		A9EF27692672B0050016EA80 /* UIImageView+Nuke.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF27682672B0050016EA80 /* UIImageView+Nuke.swift */; };
+		A9EF276E2672BA220016EA80 /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF276D2672BA220016EA80 /* RocketDetailView.swift */; };
+		A9EF27732672C7FF0016EA80 /* RocketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF27722672C7FF0016EA80 /* RocketDetailViewModel.swift */; };
+		A9EF27762672CAB90016EA80 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF27752672CAB90016EA80 /* Cardify.swift */; };
+		A9EF27792672DEBB0016EA80 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A9EF27782672DEBB0016EA80 /* SDWebImageSwiftUI */; };
+		A9EF277B2672E1420016EA80 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF277A2672E1420016EA80 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +73,10 @@
 		A9EF276126728FD70016EA80 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		A9EF27632672A3AB0016EA80 /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
 		A9EF27682672B0050016EA80 /* UIImageView+Nuke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Nuke.swift"; sourceTree = "<group>"; };
+		A9EF276D2672BA220016EA80 /* RocketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailView.swift; sourceTree = "<group>"; };
+		A9EF27722672C7FF0016EA80 /* RocketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewModel.swift; sourceTree = "<group>"; };
+		A9EF27752672CAB90016EA80 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
+		A9EF277A2672E1420016EA80 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9EF27792672DEBB0016EA80 /* SDWebImageSwiftUI in Frameworks */,
 				A96518042671632800CA640A /* RocketsNetwork.framework in Frameworks */,
 				A90A3984267177EB009C24C6 /* RocketsCoreData.framework in Frameworks */,
 				A90A3986267177EB009C24C6 /* RocketsDomain.framework in Frameworks */,
@@ -114,6 +124,7 @@
 		A96517B526715CE100CA640A /* Rockets */ = {
 			isa = PBXGroup;
 			children = (
+				A9EF27742672CAB10016EA80 /* Modifiers */,
 				A96517CA26715E6800CA640A /* Application */,
 				A90A399726718A76009C24C6 /* Use Cases */,
 				A9EF2755267229340016EA80 /* Extensions */,
@@ -146,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				A96517CD26715EA100CA640A /* Rocket List */,
+				A9EF276B2672BA030016EA80 /* Rocket Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -215,6 +227,40 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		A9EF276B2672BA030016EA80 /* Rocket Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF27712672C3D50016EA80 /* View Models */,
+				A9EF276C2672BA0F0016EA80 /* Views */,
+			);
+			path = "Rocket Detail";
+			sourceTree = "<group>";
+		};
+		A9EF276C2672BA0F0016EA80 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF276D2672BA220016EA80 /* RocketDetailView.swift */,
+				A9EF277A2672E1420016EA80 /* SafariView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9EF27712672C3D50016EA80 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF27722672C7FF0016EA80 /* RocketDetailViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A9EF27742672CAB10016EA80 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF27752672CAB90016EA80 /* Cardify.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,6 +280,7 @@
 			name = Rockets;
 			packageProductDependencies = (
 				A9EF27662672AFA50016EA80 /* Nuke */,
+				A9EF27782672DEBB0016EA80 /* SDWebImageSwiftUI */,
 			);
 			productName = Rockets;
 			productReference = A96517B326715CE100CA640A /* Rockets.app */;
@@ -264,6 +311,7 @@
 			mainGroup = A96517AA26715CE100CA640A;
 			packageReferences = (
 				A9EF27652672AFA50016EA80 /* XCRemoteSwiftPackageReference "Nuke" */,
+				A9EF27772672DEBB0016EA80 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = A96517B426715CE100CA640A /* Products */;
 			projectDirPath = "";
@@ -295,12 +343,16 @@
 				A96517D126715EB900CA640A /* RocketListViewController.swift in Sources */,
 				A90A399C26718B5F009C24C6 /* UseCaseProvider.swift in Sources */,
 				A9EF2757267229690016EA80 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */,
+				A9EF27762672CAB90016EA80 /* Cardify.swift in Sources */,
+				A9EF27732672C7FF0016EA80 /* RocketDetailViewModel.swift in Sources */,
 				A9EF2759267229910016EA80 /* RocketCollectionViewCell.swift in Sources */,
 				A9EF275B26723BC90016EA80 /* RocketViewModel.swift in Sources */,
 				A96517D326715EDA00CA640A /* RocketListViewModel.swift in Sources */,
 				A9EF276226728FD70016EA80 /* Date+Format.swift in Sources */,
 				A96517B726715CE100CA640A /* AppDelegate.swift in Sources */,
 				A9EF276026728BBE0016EA80 /* UIView+Shadow.swift in Sources */,
+				A9EF276E2672BA220016EA80 /* RocketDetailView.swift in Sources */,
+				A9EF277B2672E1420016EA80 /* SafariView.swift in Sources */,
 				A9EF27642672A3AC0016EA80 /* PaddedLabel.swift in Sources */,
 				A90A399926718AB0009C24C6 /* RocketsUseCase.swift in Sources */,
 				A9EF27692672B0050016EA80 /* UIImageView+Nuke.swift in Sources */,
@@ -509,6 +561,14 @@
 				minimumVersion = 10.2.0;
 			};
 		};
+		A9EF27772672DEBB0016EA80 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -516,6 +576,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9EF27652672AFA50016EA80 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
+		};
+		A9EF27782672DEBB0016EA80 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9EF27772672DEBB0016EA80 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
