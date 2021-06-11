@@ -25,7 +25,7 @@ struct RocketViewModel {
     init(rocket: Rocket) {
         self.name = rocket.name
         self.country = rocket.country
-        self.cost = "$3000,12"
+        self.cost = rocket.cost?.currency
         self.isActive = rocket.isActive
         self.description = rocket.description
         self.rocketImageURL = rocket.rocketImageURL
@@ -40,11 +40,11 @@ struct RocketViewModel {
             
             switch successRatePercentage {
             case 0..<30:
-                self.badgeColor = .red
+                self.badgeColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
             case 30..<60:
-                self.badgeColor = .orange
+                self.badgeColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
             case 60...100:
-                self.badgeColor = .green
+                self.badgeColor = #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 1)
             default:
                 break
             }

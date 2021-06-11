@@ -70,7 +70,7 @@ struct RocketDetailView: View {
                 } label: {
                     Text("🚀 Wikipedia")
                 }
-                .padding()
+                .padding(.bottom, 20)
             }
         }
         .sheet(isPresented: $viewModel.showsWikipedia) {
