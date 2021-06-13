@@ -10,15 +10,17 @@ import UIKit
 class RocketCollectionViewCell: UICollectionViewCell {
     
     private enum Constants {
-        static let insets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        static let insets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        static let margins = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
     }
     
     // MARK: - Properties
     
     lazy var containerStackView: UIStackView = {
         let sv = UIStackView()
-        sv.layoutMargins = Constants.insets
+        sv.layoutMargins = Constants.margins
         sv.isLayoutMarginsRelativeArrangement = true
+        sv.translatesAutoresizingMaskIntoConstraints = false
         return sv
     }()
     
@@ -35,6 +37,7 @@ class RocketCollectionViewCell: UICollectionViewCell {
         sv.spacing = 20
         sv.layoutMargins = Constants.insets
         sv.isLayoutMarginsRelativeArrangement = true
+        sv.translatesAutoresizingMaskIntoConstraints = false
         return sv
     }()
     
@@ -82,6 +85,10 @@ class RocketCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    private var sharedConstraints: [NSLayoutConstraint] = []
+    private var compactConstraints: [NSLayoutConstraint] = []
+    private var regularConstraints: [NSLayoutConstraint] = []
+    
     // MARK: - Initialization
     
     override init(frame: CGRect) {
@@ -111,24 +118,25 @@ class RocketCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout
     
     private func setupConstrainsts() {
-        containerStackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
+        sharedConstraints.append(contentsOf: [
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
             stackView.topAnchor.constraint(equalTo: containerView.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            
+            imageView.heightAnchor.constraint(equalToConstant: 60)
         ])
         
-        imageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        compactConstraints.append(imageView.widthAnchor.constraint(equalToConstant: 60))
+        regularConstraints.append(imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5))
+        
+        NSLayoutConstraint.activate(sharedConstraints)
+        layoutForTraitCollection(traitCollection)
     }
     
     override func layoutSubviews() {
@@ -137,6 +145,29 @@ class RocketCollectionViewCell: UICollectionViewCell {
         imageView.setCornerRadius()
         containerView.setCornerRadius()
         successRateLabel.setCornerRadius()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        layoutForTraitCollection(traitCollection)
+    }
+    
+    private func layoutForTraitCollection(_ traitCollection: UITraitCollection) {
+        if (sharedConstraints.first?.isActive == false) {
+            NSLayoutConstraint.activate(sharedConstraints)
+        }
+        
+        if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular {
+            if !regularConstraints.isEmpty && regularConstraints.first?.isActive == true {
+                NSLayoutConstraint.deactivate(regularConstraints)
+            }
+            NSLayoutConstraint.activate(compactConstraints)
+        } else {
+            if !compactConstraints.isEmpty && compactConstraints.first?.isActive == true {
+                NSLayoutConstraint.deactivate(compactConstraints)
+            }
+            NSLayoutConstraint.activate(regularConstraints)
+        }
     }
     
     // MARK: - Bindings
