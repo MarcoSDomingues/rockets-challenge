@@ -8,13 +8,11 @@
 import Foundation
 import RocketsDomain
 import RocketsNetwork
-import RocketsCoreData
 
 class UseCaseProvider {
     
-    open class var rocketsUseCase: RocketsUseCaseInterface {
-        return RocketsUseCase(remoteRepository: RocketsRemoteRepository(),
-                              storageRepository: RocketsStorageRepository())
+    class var rocketsUseCase: RocketsUseCaseInterface {
+        return RocketsUseCase(remoteRepository: RocketsRemoteRepository())
     }
 
 }

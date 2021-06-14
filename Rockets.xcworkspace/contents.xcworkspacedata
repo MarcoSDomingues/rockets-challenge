@@ -13,8 +13,5 @@
       <FileRef
          location = "group:Common/RocketsNetwork/RocketsNetwork.xcodeproj">
       </FileRef>
-      <FileRef
-         location = "group:Common/RocketsCoreData/RocketsCoreData.xcodeproj">
-      </FileRef>
    </Group>
 </Workspace>

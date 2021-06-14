@@ -12,11 +12,9 @@ import RocketsDomain
 class RocketsUseCase: RocketsUseCaseInterface {
     
     private var remoteRepository: RocketsRemoteRepositoryInterface
-    private var storageRepository: RocketsStorageRepositoryInterface
     
-    init(remoteRepository: RocketsRemoteRepositoryInterface, storageRepository: RocketsStorageRepositoryInterface) {
+    init(remoteRepository: RocketsRemoteRepositoryInterface) {
         self.remoteRepository = remoteRepository
-        self.storageRepository = storageRepository
     }
     
     // MARK: - RocketsUseCaseInterface
